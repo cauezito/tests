@@ -13,6 +13,12 @@ class MathUtilsTest {
 	}
 	
 	@Test
+	void divideTest() {
+		MathUtils math = new MathUtils();	
+		assertThrows(ArithmeticException.class, () -> math.divide(5,0), "This method should divide by zero and generate an error");
+	}
+	
+	@Test
 	void computeCircleTest() {
 		MathUtils math = new MathUtils();	
 		double expected = 314.1592653589793;
